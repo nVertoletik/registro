@@ -8,26 +8,38 @@
 <head>
 	<title>Registro de usuarios</title>
 	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<link rel="stylesheet"  type ="text/css" href="css/registro.css">
 </head>
 
-<body>
+<body class="rgba-primary-4">
 	<h2>Registro de usuarios</h2>
 	<p>
 		Para registrar un usuario completa el formulario con los datos que se solicitan y al finalizar presiona el boton de "enviar"
 	</p>
 	
 	<form action="#" method="post">
+		<div class="rgba-primary-3">
 		Nombre:<br/>
 		<input type="text" name="nombre"><br/>
-		Apellido paterno:<br/>
+		</div>
+		<div>Apellido paterno:<br/>
 		<input type="text" name="apellidoPaterno"><br/>
+		</div>
+		<div>
 		Apellido materno:<br/>
 		<input type="text" name="apellidoMaterno"><br/>
+		</div>
+		<div>
 		Telefono:<br/>
 		<input type="tel" name="telefono"><br/>
+		</div>
+		<div>
 		Correo:<br/>
 		<input type="email" name="correo"><br/>
+		</div>
+		<div>
 		<input type="submit" value="Enviar">
+		</div>
 	</form>
 </body>
 
