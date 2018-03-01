@@ -67,6 +67,9 @@
 /*body{
 background-color: .color-complement-4;
 }*/
+body{
+color: rgba( 43, 75,111,1);
+}
 div{
 margin: 2px 5px 2px 5px;
                   border: 2px solid red
