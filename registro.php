@@ -17,7 +17,7 @@
 		Para registrar un usuario completa el formulario con los datos que se solicitan y al finalizar presiona el boton de "enviar"
 	</p>
 	
-	<form action="#" method="post">
+	<form action="alta_registro.php" method="post">
 		<div class="rgba-primary-3">
 		Nombre:<br/>
 		<input type="text" name="nombre"><br/>

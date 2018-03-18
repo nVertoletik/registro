@@ -12,7 +12,8 @@
 ?>
 
 /*
-$con = pg_connect("host port dbname user password");
+$con = pg_connect("host port dbname user password") or
+die(pg_last_error());
 $result = pg_query($con, "select * from tabla");
 $resp = pg_fetch_array($result);
 pg_close($con);
