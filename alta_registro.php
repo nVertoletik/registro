@@ -29,7 +29,7 @@ if(!empty($_POST['telefono'])){
 	$telefono = filter_var($_POST['telefono'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 }
 
-if(!empty($correo)){
+if(!empty($_POST['correo'])){
 	$correo = filter_var($_POST['correo'], FILTER_SANITIZE_EMAIL);
 }
 
