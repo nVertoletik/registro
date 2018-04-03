@@ -19,10 +19,10 @@
 	<form action="autenticar.php" method="post">
 		<div class="rgba-primary-3">
 		Usuario:<br/>
-		<input type="text" name="usuario"><br/>
+		<input type="text" name="usuario" autocomplete="off"><br/>
 		</div>
 		<div>Contraseña:<br/>
-		<input type="password" name="password"><br/>
+		<input type="password" name="password" autocomplete="off"><br/>
 		</div>
 		<div>
 		<input type="submit" value="Iniciar sesión">
