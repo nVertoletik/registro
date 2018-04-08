@@ -5,14 +5,14 @@
   $password = $_POST['password']; 
   $password = md5($password);
   
-  $result = mysql_query("SELECT password FROM usuarios WHERE usuario = $usuario ");
-  $row = mysql_fetch_array($result);
-  
-  if($row == $password){
-  echo "True;"
+  $result = consulta("SELECT password FROM usuarios WHERE usuario = '$usuario'");
+  $row = $result;
+  print_r($row);
+  if($row[0]['password'] == $password){
+  //TODO: Agregar lo que falta
   }
   else{
-  echo "False"
+    //TODO:redireccionar
   }
   
 ?>

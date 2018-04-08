@@ -6,7 +6,7 @@
 </head>
 <body>
 <?php
-function validarValores($nombre, $apellidoPaterno, $apellidoMaterno, $telefono, $correo){
+function validarValores($nombre, $apellidoPaterno, $apellidoMaterno, $telefono, $correo, $password, $usuario){
 	//TODO: Agregar validacion de regex
 	return true;
 }
@@ -33,13 +33,21 @@ if(!empty($_POST['correo'])){
 	$correo = filter_var($_POST['correo'], FILTER_SANITIZE_EMAIL);
 }
 
+if(!empty($_POST['password'])){
+	$password = md5($_POST['password']);
+}
+
+if(!empty($_POST['usuario'])){
+	$usuario = filter_var($_POST['usuario'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
+}
 echo "Nombre: ".$nombre."<br/>";
 echo "Apellido Paterno: ".$apellidoPaterno."<br/>";
 echo "Apellido Materno: ".$apellidoMaterno."<br/>";
 echo "Telefono: ".$telefono."<br/>";
 echo "Correo: ".$correo."<br/>";
-if(validarValores($nombre, $apellidoPaterno, $apellidoMaterno, $telefono, $correo)){
-	$registro = "insert into usuarios (nombre,apaterno,amaterno,telefono, correo) values('$nombre','$apellidoPaterno','$apellidoMaterno','$telefono','$correo')";
+echo "Usuario: ".$usuario."<br/>";
+if(validarValores($nombre, $apellidoPaterno, $apellidoMaterno, $telefono, $correo, $password, $usuario)){
+	$registro = "insert into usuarios (nombre,apaterno,amaterno,telefono, correo, password, usuario) values('$nombre','$apellidoPaterno','$apellidoMaterno','$telefono','$correo', '$password', '$usuario')";
 	$guarda_registro = consulta($registro);
 	if($guarda_registro == false){
 		echo "Datos ingresados de manera correcta";

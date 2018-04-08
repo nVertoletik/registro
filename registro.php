@@ -37,6 +37,12 @@
 		Correo:<br/>
 		<input type="email" name="correo"><br/>
 		</div>
+		<div>Usuario:<br/>
+		<input type="text" name="usuario"><br/>
+		</div>
+		<div>Contraseña:<br/>
+		<input type="password" name="password" autocomplete="off"><br/>
+		</div>
 		<div>
 		<input type="submit" value="Enviar">
 		</div>
